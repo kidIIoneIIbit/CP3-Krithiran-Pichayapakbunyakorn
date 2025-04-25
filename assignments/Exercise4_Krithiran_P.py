@@ -1,0 +1,1 @@
+Foundation_English = float(input("your score in Foundation English"))
