@@ -1,6 +1,6 @@
 menulist = []
-pricelist = []
-total = 0
+
+
 
 while True:
     menuname = input("Please Enter Menu :")
@@ -8,15 +8,15 @@ while True:
         break
     else:
         menuprice = int(input("Price : "))
-        menulist.append(menuname)
-        pricelist.append(menuprice)
-        total += menuprice
+        menulist.append([menuname,menuprice])
 
 
 def showBill():
+    total = 0
     print("-----My food -----")
     for i in range(len(menulist)):
-        print(menulist[i],pricelist[i])
-    print("total",total)
-
+        print(menulist[i])
+        total += menulist[i][1]
+    print("total : ",total)
+print(menulist)
 showBill()
